@@ -7,8 +7,9 @@ df = pd.read_csv('Images-Book.csv',usecols = ['Identifier', 'Edition Statement',
 ,'Publisher','Title', 'Author','Contributors','Shelfmarks' ], keep_default_na = False ,nrows = 200)
 
 # cleansing 'Place of Publication' column
-df = df.sort_values(by = ['Place of Publication'],ascending=False)                         # r'.*?\[(.*)].*'
-df['Place of Publication'] = df['Place of Publication'].str.lower().str.replace(r'\]', '', regex=True)#implement regex behavior
+df = df.sort_values(by = ['Place of Publication'],ascending=False) #'\(|\)!,"-', '', regex=True, inplace=True
+df['Place of Publication'] = df['Place of Publication'].str.lower().replace('[].?+;())&:[]', '', regex=True)#implement regex behavior
+df['Date of Publication'] = df['Date of Publication'].replace('[].?+;())&:[]', '', regex=True)#implement regex behavior
 
 # importing all cities and measure with df.Place of Publication column
 cities = pd.read_csv('world-cities.csv', usecols = ['name']  )
@@ -38,4 +39,5 @@ join_table_2_null =    join_table_2[join_table_2['name_y'].isnull() ] #notmatche
 frames = [join_table_not_null[['Identifier','Edition Statement','Place of Publication','Date of Publication','Publisher','Title','Author','Contributors','Shelfmarks']],join_table_2_notnull[['Identifier','Edition Statement','Place of Publication','Date of Publication','Publisher','Title','Author','Contributors','Shelfmarks']]]
 concat_table = pd.concat(frames).drop_duplicates()
 concat_table['Place of Publication'] = concat_table['Place of Publication'].str.title()
-concat_table.to_excel('book_concating_v3.xlsx', sheet_name = 'Cleansed data',index = False)
+concat_table.to_excel('book_concating.xlsx', sheet_name = 'Cleansed data',index = False)
+#concat_table
