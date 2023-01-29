@@ -47,3 +47,11 @@ Let’s try to get date, time, day, month, year parts from 'date_string' column.
 5. dt.year - extracts year part from datetime.<br>
 6. dt.time - extracts time part from datetime.<br>
 
+We need to add new columns and assign extracted value with above function to it.<br> 
+***New columns:***<br> 
+df['match_date'] =
+df['day'] =
+df['month'] =
+df['year'] =
+df['time'] =
+
