@@ -51,6 +51,7 @@ Let’s try to get date, time, day, month, year parts from 'date_string' column.
 We need to add new columns and assign extracted value with above function to it.<br> 
 
 ***New columns:*** <br> 
+
 df['match_date'] =<br> 
 df['day'] =<br> 
 df['month'] =<br> 
@@ -92,6 +93,7 @@ We have to extract half time and full time scores from **'half_time_score'** and
 I am going to add four new columns and extract each single score and assign to new columns.<br>
 
 ***New columns:*** <br>
+
 **df['home_team_score_half_time']** =<br>
 **df['away_team_score_half_time']** =<br>
 **df['home_team_score_full_time']** =<br>
