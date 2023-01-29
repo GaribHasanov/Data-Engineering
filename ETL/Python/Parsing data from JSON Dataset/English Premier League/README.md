@@ -63,8 +63,8 @@ In Python, if you want to add new column to the pandas object you have to define
 <h4 align="center">Pic:3</h1>
 
 ***Continue transformation.***<br>
-Let’s concatenate parentheses with 'half_time_score' and 'full_time_score' values.<br>
-df['half_time_score'] = '(' + df[['half_time_score']] + ')'<br>
-df['full_time_score'] = '(' + df[['full_time_score']] + ')'<br>
-After that add new “match result “ column and concatenate 'home_team_name' and 'away_team_name' column values with the values of 'full_time_score' column.
-df['match result'] = df['home_team_name'] +' '+ df['full_time_score'] +' '+ df['away_team_name']
+Let’s concatenate parentheses with ***'half_time_score'*** and ***'full_time_score'*** values.<br>
+***df['half_time_score']*** = ***'(' + df[['half_time_score']] + ')'***<br>
+***df['full_time_score']*** = ***'(' + df[['full_time_score']] + ')'***<br>
+After that add new ***“match result “*** column and concatenate ***'home_team_name'*** and ***'away_team_name'*** column values with the values of ***'full_time_score'*** column.
+***df['match result']*** = ***df['home_team_name'] +' '+ df['full_time_score'] +' '+ df['away_team_name']***
