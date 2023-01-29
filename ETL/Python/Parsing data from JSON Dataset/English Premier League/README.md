@@ -53,3 +53,6 @@ Used functions:
 
 6. dt.time - extracts time part from datetime.
 
+salam<br>
+slm
+
