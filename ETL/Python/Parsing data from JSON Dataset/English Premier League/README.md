@@ -18,6 +18,7 @@ JSON dataset content:
 ![image](https://user-images.githubusercontent.com/60735401/215338209-e1eb446d-579c-473c-97a1-85ad94016394.png)
 
 First of all
+
 We need Jupyter notebook. We can follow the steps with different application or tools. The Jupyter notebook is one of the powerful web application for data purpose
 1.	We have to import pandas.
 2.	Use “read_json” function to convert JSON string to pandas object. 
