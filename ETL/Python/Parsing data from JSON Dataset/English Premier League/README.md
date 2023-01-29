@@ -116,7 +116,8 @@ As we mentioned above that we know already **left side** and **right side** team
 Left side team is **“home_team”**, right side team is **“away_team”** and there are score extracted columns described below:<br>
 1) **“home_team_score_half_time”**,  2) **“away_team_score_half_time”**, 3)**“home_team_score_full_time”**, 4) **“away_team_score_full_time”**<br>
 
-**Now, time to add condition and determine the half-time and full-time winner.**<br>
+## Now, time to add condition and determine the **half-time** and **full-time** winner.<br>
+
 1. If the **“half time home team score”** is less than **“half time away team score”** it means **“away_team”** is half time winner then it will return **“away_team” name.**<br>
 2. If the **“full time home team score”** is greater than **“full time away team score”** it means **“home_team”** is full time winner then it will return **“home_team”** name.<br>
 3. If the **“half time home team score”** is equal to **“half time away team score”** it means scores are **draw** then it will return **“Draw”**.<br>
