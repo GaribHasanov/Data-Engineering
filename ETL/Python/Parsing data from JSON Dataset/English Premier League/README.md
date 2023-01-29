@@ -60,5 +60,5 @@ df['time'] =<br>
 In Python, if you want to add new column to the pandas object you have to define column name and assign value to it. If new column name is existing column name in this case the existing column name will be updated, if there is no any matched column name with new column name then it will be added as a new column.
 
 ![image](https://user-images.githubusercontent.com/60735401/215339766-5ca25ef0-9950-4083-9985-4b5a45c23043.png)
-
+<h4 align="center">Pic:3</h1>
 
