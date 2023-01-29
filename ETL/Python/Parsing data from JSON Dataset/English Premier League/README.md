@@ -17,7 +17,7 @@ JSON dataset content:
 
 ![image](https://user-images.githubusercontent.com/60735401/215338209-e1eb446d-579c-473c-97a1-85ad94016394.png)
 
-First of all
+***First of all***
 
 We need Jupyter notebook. We can follow the steps with different application or tools. The Jupyter notebook is one of the powerful web application for data purpose
 1.	We have to import pandas.
@@ -29,8 +29,8 @@ We need Jupyter notebook. We can follow the steps with different application or 
 The output is not understandable because keys of JSON are defined as indexes instead of columns.
 In this case, we have to use orient="index" and replace indexes to columns and columns to indexes.
 
-orient="index" – defines indexes as columns<br>
-head(10) function – retriving 10 rows.<br>
+***orient="index"*** – defines indexes as columns<br>
+***head(10) function*** – retriving 10 rows.<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215338309-c2a2f6b5-cc51-43fb-a62d-4b56578c5d6a.png)
 <h4 align="center">Pic:2</h1>
