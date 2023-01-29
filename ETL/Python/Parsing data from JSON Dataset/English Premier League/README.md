@@ -78,3 +78,8 @@ After that add new ***“match result “*** column and concatenate ***'home_tea
 ***Renaming existing columns:***<br>
 ***df.rename(columns = {'home_team_name':'home_team', 'away_team_name':'away_team'}, inplace = True)***<br>
 ***inplace*** function – performs changing on original DataFrame.<br>
+
+![image](https://user-images.githubusercontent.com/60735401/215340660-b9121849-af3e-4b63-b0a4-3884d7ffd375.png)
+<h4 align="center">Pic:4</h1>
+So, There are already half time and full time score. We need to find half time winner and full time winner.<br>
+Based on the “DataFrame”, we see that left side is home team and right side is away team. <br>
