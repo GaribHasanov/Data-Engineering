@@ -21,12 +21,14 @@ First of all
 We need Jupyter notebook. We can follow the steps with different application or tools. The Jupyter notebook is one of the powerful web application for data purpose
 1.	We have to import pandas.
 2.	Use “read_json” function to convert JSON string to pandas object. 
+
 ![image](https://user-images.githubusercontent.com/60735401/215338281-125577ec-7b93-42b4-925e-7cf42bf0f057.png)
 Pic:1
 
 The output is not understandable because keys of JSON are defined as indexes instead of columns.
 In this case, we have to use orient="index" and replace indexes to columns and columns to indexes. 
 orient="index" – define indexes as columns
-head(10) function – retriving 10 rows. 
+head(10) function – retriving 10 rows.
+
 ![image](https://user-images.githubusercontent.com/60735401/215338309-c2a2f6b5-cc51-43fb-a62d-4b56578c5d6a.png)
 Pic:2
