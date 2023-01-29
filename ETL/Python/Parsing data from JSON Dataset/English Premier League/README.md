@@ -27,8 +27,10 @@ We need Jupyter notebook. We can follow the steps with different application or 
 <h4 align="center">Pic:1</h1>
 
 The output is not understandable because keys of JSON are defined as indexes instead of columns.
-In this case, we have to use orient="index" and replace indexes to columns and columns to indexes. 
-orient="index" – define indexes as columns
+In this case, we have to use orient="index" and replace indexes to columns and columns to indexes.
+
+orient="index" – defines indexes as columns
+
 head(10) function – retriving 10 rows.
 
 ![image](https://user-images.githubusercontent.com/60735401/215338309-c2a2f6b5-cc51-43fb-a62d-4b56578c5d6a.png)
