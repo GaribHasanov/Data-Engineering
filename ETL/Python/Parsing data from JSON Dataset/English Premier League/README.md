@@ -41,18 +41,10 @@ Let’s try to get date, time, day, month, year parts from 'date_string' column.
 
 Used functions:
 
-1. pd.to_datetime - converting argument/string/object to datetime data type.
-
-2. dt.date - extracts date part from datetime.
-
-3. dt.day -  extracts day part from datetime.
-
-4. dt.month_name() - extracts month part (with name) from datetime.
-
-5. dt.year - extracts year part from datetime.
-
-6. dt.time - extracts time part from datetime.
-
-salam<br>
-slm
+1. pd.to_datetime - converting argument/string/object to datetime data type.<br>
+2. dt.date - extracts date part from datetime.<br>
+3. dt.day -  extracts day part from datetime.<br>
+4. dt.month_name() - extracts month part (with name) from datetime.<br>
+5. dt.year - extracts year part from datetime.<br>
+6. dt.time - extracts time part from datetime.<br>
 
