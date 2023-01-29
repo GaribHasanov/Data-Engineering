@@ -150,11 +150,11 @@ Using the **loc()** function, we can access the data values fitted in the partic
 Thus, we have come to the end. Its time to load our work to an Excel file.<br>
 **df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )**
 Excel file name and sheet name can be set as desired.<br>
-**to_excel()** function -  is used to write object to an Excel file.<br>
+**to_excel()** function -  is used to write object to an Excel file. <br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341217-00333350-3434-4d26-8f38-747c2f72c230.png)
 <h4 align="center">Pic:8</h1>
-**Output:**<br>
+**Output:** <br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341230-4191a7ff-020f-46f6-ae25-a7483f9221d3.png)
 <h4 align="center">Pic:9</h1>
@@ -162,6 +162,6 @@ Excel file name and sheet name can be set as desired.<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341235-e82004fb-6a0b-4278-83ce-567b93f45098.png)
 <h4 align="center">Pic:10</h1>
 
-**Conclusion**<br>
+**Conclusion** <br>
 We have learnt how to extract data from JSON dataset, parse, transform it with powerful Pandas library of Python and load it to an Excel file.
 
