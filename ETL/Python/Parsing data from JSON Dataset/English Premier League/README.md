@@ -75,3 +75,6 @@ After that add new ***“match result “*** column and concatenate ***'home_tea
 ***df*** = ***df[['home_team_name', 'away_team_name','match result','match_date','day','month','year',
          'time','half_time_score','full_time_score']]***
 
+***Renaming existing columns:***<br>
+***df.rename(columns = {'home_team_name':'home_team', 'away_team_name':'away_team'}, inplace = True)***<br>
+***inplace*** function – performs changing on original DataFrame.<br>
