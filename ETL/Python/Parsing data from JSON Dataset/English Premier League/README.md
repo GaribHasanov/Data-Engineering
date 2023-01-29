@@ -85,7 +85,7 @@ After that add new ***“match result “*** column and concatenate ***'home_tea
 So, There are already half time and full time score. We need to find half time winner and full time winner.<br>
 Based on the “DataFrame”, we see that left side is home team and right side is away team. <br>
 
-As an example of half time score of first row is (0 : 2) and we can say half time winner is “Liverpool” , full time score is (0 : 3) and we can full time winner is also “Liverpool” but this approach is not professional approach 😊<br>
+As an example of half time score of first row is **(0 : 2)** and we can say **half-time** winner is **“Liverpool”** , **full-time** score is **(0 : 3)** and we can full time winner is also **“Liverpool”** but this approach is not professional approach 😊<br>
 We have to extract half time and full time scores from **'half_time_score'** and **'full_time_score'** column and determine the half and full time exact winners.
 I am going to add four new columns and extract each single score and assign to new columns.<br>
 
@@ -108,7 +108,7 @@ We have already extracted scores in the separate columns and we have to determin
 As we mentioned above that we know already left side and right side teams.<br>
 Left side team is **“home_team”**, right side team is **“away_team”** and there are score extracted columns described below:<br>
 1) **“home_team_score_half_time”**,  2) **“away_team_score_half_time”**, 3)**“home_team_score_full_time”**,  
-4) **“away_team_score_full_time”**
+4) **“away_team_score_full_time”**<br>
 **Now, time to add condition and determine the half-time and full-time winner.**<br>
 1. If the **“half time home team score”** is less than **“half time away team score”** it means **“away_team”** is half time winner then it will return **“away_team” name.**<br>
 2. If the **“full time home team score”** is greater than **“full time away team score”** it means **“home_team”** is full time winner then it will return **“home_team”** name.<br>
