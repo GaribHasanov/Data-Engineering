@@ -40,6 +40,7 @@ So, we extracted and parsed the JSON dataset into a readable and understandable 
 Let’s try to get date, time, day, month, year parts from 'date_string' column.
 
 Used functions:
+
 1.pd.to_datetime - converting argument/string/object to datetime data type.
 
 2.dt.date - extracts date part from datetime.
