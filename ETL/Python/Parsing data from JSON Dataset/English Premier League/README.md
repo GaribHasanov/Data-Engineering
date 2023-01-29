@@ -8,7 +8,7 @@ Steps:
 2. Parsing and Transforming
 3. Loading into an Excel file.
 
-Used tools:
+Used tools:<br>
 1. Jupyter Notebook
 2. Pyton (Pandas Library)
 
