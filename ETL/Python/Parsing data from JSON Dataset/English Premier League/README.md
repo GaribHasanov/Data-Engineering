@@ -23,7 +23,7 @@ We need Jupyter notebook. We can follow the steps with different application or 
 2.	Use “read_json” function to convert JSON string to pandas object. 
 
 ![image](https://user-images.githubusercontent.com/60735401/215338281-125577ec-7b93-42b4-925e-7cf42bf0f057.png)
-Pic:1
+<h4 align="center">Pic:1</h1>
 
 The output is not understandable because keys of JSON are defined as indexes instead of columns.
 In this case, we have to use orient="index" and replace indexes to columns and columns to indexes. 
