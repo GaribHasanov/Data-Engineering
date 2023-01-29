@@ -40,6 +40,7 @@ Now, it's time to transform data.
 Let’s try to get date, time, day, month, year parts from 'date_string' column.
 
 ***Used functions:***<br>
+
 1. pd.to_datetime - converting argument/string/object to datetime data type.<br>
 2. dt.date - extracts date part from datetime.<br>
 3. dt.day -  extracts day part from datetime.<br>
@@ -63,6 +64,7 @@ In Python, if you want to add new column to the pandas object you have to define
 <h4 align="center">Pic:3</h1>
 
 ***Continue transformation.***<br>
+
 Let’s concatenate parentheses with ***'half_time_score'*** and ***'full_time_score'*** values.<br>
 ***df['half_time_score']*** = ***'(' + df[['half_time_score']] + ')'*** <br>
 ***df['full_time_score']*** = ***'(' + df[['full_time_score']] + ')'*** <br>
@@ -102,6 +104,7 @@ I am going to add four new columns and extract each single score and assign to n
 **df['home_team_score_full_time']** = **df['full_time_score'].str.strip().str[1]**<br>
 **df['away_team_score_full_time']** = **df['full_time_score'].str.strip().str[-2]**<br>
 **str.strip()** function – is used to remove leading and trailing characters.<br>
+
 ![image](https://user-images.githubusercontent.com/60735401/215341125-32039a69-bcc2-4f88-81c9-0c59f7302762.png)
 <h4 align="center">Pic:5</h1>
 
@@ -143,13 +146,17 @@ Thus, we have come to the end. Its time to load our work to an Excel file.<br>
 **df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )**
 Excel file name and sheet name can be set as desired.<br>
 **to_excel()** function -  is used to write object to an Excel file.<br>
+
 ![image](https://user-images.githubusercontent.com/60735401/215341217-00333350-3434-4d26-8f38-747c2f72c230.png)
 <h4 align="center">Pic:8</h1>
 **Output:**<br>
+
 ![image](https://user-images.githubusercontent.com/60735401/215341230-4191a7ff-020f-46f6-ae25-a7483f9221d3.png)
 <h4 align="center">Pic:9</h1>
+
 ![image](https://user-images.githubusercontent.com/60735401/215341235-e82004fb-6a0b-4278-83ce-567b93f45098.png)
 <h4 align="center">Pic:10</h1>
+
 **Conclusion**<br>
 We have learnt how to extract data from JSON dataset, parse, transform it with powerful Pandas library of Python and load it to an Excel file.
 
