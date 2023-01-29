@@ -85,68 +85,69 @@ After that add new ***“match result “*** column and concatenate ***'home_tea
 So, There are already half time and full time score. We need to find half time winner and full time winner.<br>
 Based on the “DataFrame”, we see that left side is home team and right side is away team. <br>
 
-As an example of half time score of first row is (0 : 2) and we can say half time winner is “Liverpool” , full time score is (0 : 3) and we can full time winner is also “Liverpool” but this approach is not professional approach 😊
-We have to extract half time and full time scores from 'half_time_score' and 'full_time_score' column and determine the half and full time exact winners.
-I am going to add four new columns and extract each single score and assign to new columns
+As an example of half time score of first row is (0 : 2) and we can say half time winner is “Liverpool” , full time score is (0 : 3) and we can full time winner is also “Liverpool” but this approach is not professional approach 😊<br>
+We have to extract half time and full time scores from **'half_time_score'** and **'full_time_score'** column and determine the half and full time exact winners.
+I am going to add four new columns and extract each single score and assign to new columns.<br>
 
-***New columns:***
-df['home_team_score_half_time'] =<br>
-df['away_team_score_half_time'] =<br>
-df['home_team_score_full_time'] =<br>
-df['away_team_score_full_time'] =<br>
+***New columns:***<br>
+**df['home_team_score_half_time']** =<br>
+**df['away_team_score_half_time']** =<br>
+**df['home_team_score_full_time']** =<br>
+**df['away_team_score_full_time']** =<br>
 
 **df['home_team_score_half_time']** = **df['half_time_score'].str.strip().str[1]**<br>
 **df['away_team_score_half_time']** = **df['half_time_score'].str.strip().str[-2]**<br>
 
-df['home_team_score_full_time'] = df['full_time_score'].str.strip().str[1]<br>
-df['away_team_score_full_time'] = df['full_time_score'].str.strip().str[-2]<br>
-str.strip() function – is used to remove leading and trailing characters.
+**df['home_team_score_full_time']** = **df['full_time_score'].str.strip().str[1]**<br>
+**df['away_team_score_full_time']** = **df['full_time_score'].str.strip().str[-2]**<br>
+**str.strip()** function – is used to remove leading and trailing characters.<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341125-32039a69-bcc2-4f88-81c9-0c59f7302762.png)
 <h4 align="center">Pic:5</h1>
-We have already extracted scores in the separate columns and we have to determine half-time and full-time winners.
+We have already extracted scores in the separate columns and we have to determine half-time and full-time winners.<br>
 
-As we mentioned above that we know already left side and right side teams.
-Left side team is “home_team”, right side team is “away_team” and there are score extracted columns described below:
-1) “home_team_score_half_time”,  2) “away_team_score_half_time”, 3)“home_team_score_full_time”,  
-4) “away_team_score_full_time”
-Now, time to add condition and determine the half-time and full-time winner.
-1. İf the “half time home team score” is less than “half time away team score” it means “away_team” is half time winner then it will return “away_team” name.
-2. İf the “full time home team score” is greater than “full time away team score” it means “home_team” is full time winner then it will return “home_team” name.
-3. İf the “half time home team score” is equal to “half time away team score” it means scores are draw then it will return “Draw”.
-4. İf the “full time home team score” is equal to “full time away team score” it means scores are draw then it will return “Draw”.
+As we mentioned above that we know already left side and right side teams.<br>
+Left side team is **“home_team”**, right side team is **“away_team”** and there are score extracted columns described below:<br>
+1) **“home_team_score_half_time”**,  2) **“away_team_score_half_time”**, 3)**“home_team_score_full_time”**,  
+4) **“away_team_score_full_time”**
+**Now, time to add condition and determine the half-time and full-time winner.**<br>
+1. If the **“half time home team score”** is less than **“half time away team score”** it means **“away_team”** is half time winner then it will return **“away_team” name.**<br>
+2. If the **“full time home team score”** is greater than **“full time away team score”** it means **“home_team”** is full time winner then it will return **“home_team”** name.<br>
+3. If the **“half time home team score”** is equal to **“half time away team score”** it means scores are **draw** then it will return **“Draw”**.<br>
+4. If the **“full time home team score”** is equal to **“full time away team score”** it means scores are **draw** then it will return **“Draw”**.<br>
 
-Condition code:
-df.loc[df['home_team_score_half_time'] >  df['away_team_score_half_time'], 'half_time_winner'] = df['home_team']  
-df.loc[df['home_team_score_half_time'] <  df['away_team_score_half_time'], 'half_time_winner'] = df['away_team']  
-df.loc[df['home_team_score_half_time'] == df['away_team_score_half_time'], 'half_time_winner'] = 'Draw' 
+**Condition code:**<br>
+**df.loc[df['home_team_score_half_time']** >  **df['away_team_score_half_time']**, **'half_time_winner']** = **df['home_team']**<br>
+**df.loc[df['home_team_score_half_time']** <  **df['away_team_score_half_time']**, **'half_time_winner']** = **df['away_team']**<br>
+**df.loc[df['home_team_score_half_time']** == **df['away_team_score_half_time']**, **'half_time_winner']** = **'Draw'**<br>
 
-df.loc[df['home_team_score_full_time'] >  df['away_team_score_full_time'], 'full_time_winner'] = df['home_team']  
-df.loc[df['home_team_score_full_time'] <  df['away_team_score_full_time'], 'full_time_winner'] = df['away_team']  
-df.loc[df['home_team_score_full_time'] == df['away_team_score_full_time'], 'full_time_winner'] = 'Draw'
-loc() function –helps us to retrieve data values from a dataset at an ease. Using the loc() function, we can access the data values fitted in the particular row or column based on the index value passed to the function
+**df.loc[df['home_team_score_full_time']** >  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['home_team']**<br>
+**df.loc[df['home_team_score_full_time']** <  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['away_team']**<br>
+**df.loc[df['home_team_score_full_time']** == **df['away_team_score_full_time']**, **'full_time_winner']** = **'Draw'**<br>
+**loc()** function –helps us to retrieve data values from a dataset at an ease.<br>
+Using the **loc()** function, we can access the data values fitted in the particular row or column based on the index value passed to the function.<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341174-64602342-33b3-40d0-a304-10619ed3360b.png)
 <h4 align="center">Pic:6</h1>
 
-Half-time and full-time winners are determined, full-time winner is the main winner of the game. Now let’s add new winner column and assign full time winner to it and retrieve only needed columns.
+Half-time and full-time winners are determined, full-time winner is the main winner of the game. Now let’s add new winner column and assign full time winner to it and retrieve only needed columns.<br>
 # Adding new winner column and assign full_time_winner to it
 df['winner'] = df['full_time_winner']
 # Retrieving final needed columns
-df = df[['home_team', 'away_team','match result','half_time_winner',         'half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]
+**df** = **df[['home_team', 'away_team','match result','half_time_winner',         'half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**
 
 ![image](https://user-images.githubusercontent.com/60735401/215341201-d4871741-1d01-4dd0-9906-d961bcae2773.png)
 <h4 align="center">Pic:7</h1>
 Thus, we have come to the end. Its time to load our work to an Excel file.
-df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )
+**df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )**
 Excel file name and sheet name can be set as desired.
-to_excel() function -  is used to write object to an Excel file. 
+**to_excel()** function -  is used to write object to an Excel file. 
 ![image](https://user-images.githubusercontent.com/60735401/215341217-00333350-3434-4d26-8f38-747c2f72c230.png)
 <h4 align="center">Pic:8</h1>
-Output:
+**Output:**
 ![image](https://user-images.githubusercontent.com/60735401/215341230-4191a7ff-020f-46f6-ae25-a7483f9221d3.png)
 <h4 align="center">Pic:9</h1>
 ![image](https://user-images.githubusercontent.com/60735401/215341235-e82004fb-6a0b-4278-83ce-567b93f45098.png)
 <h4 align="center">Pic:10</h1>
-Conclusion
+**Conclusion**
 We have learnt how to extract data from JSON dataset, parse, transform it with powerful Pandas library of Python and load it to an Excel file.
 
