@@ -140,9 +140,11 @@ Using the **loc()** function, we can access the data values fitted in the partic
 <h4 align="center">Pic:6</h1>
 
 **Half-time** and **full-time** winners are determined, **full-time** winner is the main winner of the game. Now let’s add new winner column and assign **full-time** winner to it and retrieve only needed columns.<br>
-//Adding new winner column and assign **full_time_winner** to it
+
+//Adding new winner column and assign **full_time_winner** to it<br>
 **df['winner']** = **df['full_time_winner']**
-//Retrieving final needed columns
+
+//Retrieving final needed columns<br>
 **df** = **df[['home_team', 'away_team','match result','half_time_winner','half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341201-d4871741-1d01-4dd0-9906-d961bcae2773.png)
