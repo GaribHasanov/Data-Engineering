@@ -78,6 +78,7 @@ After that add new ***“match result “*** column and concatenate ***'home_tea
          'time','half_time_score','full_time_score']]***
 
 ***Renaming existing columns:***<br>
+
 ***df.rename(columns = {'home_team_name':'home_team', 'away_team_name':'away_team'}, inplace = True)***<br>
 ***inplace*** function – performs changing on original DataFrame.<br>
 
@@ -122,6 +123,7 @@ Left side team is **“home_team”**, right side team is **“away_team”** an
 4. If the **“full time home team score”** is equal to **“full time away team score”** it means scores are **draw** then it will return **“Draw”**.<br>
 
 **Condition code:**<br>
+
 **df.loc[df['home_team_score_half_time']** >  **df['away_team_score_half_time']**, **'half_time_winner']** = **df['home_team']**<br>
 **df.loc[df['home_team_score_half_time']** <  **df['away_team_score_half_time']**, **'half_time_winner']** = **df['away_team']**<br>
 **df.loc[df['home_team_score_half_time']** == **df['away_team_score_half_time']**, **'half_time_winner']** = **'Draw'**<br>
