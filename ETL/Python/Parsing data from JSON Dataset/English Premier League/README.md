@@ -150,7 +150,7 @@ Retrieving final needed columns <br>
 ![image](https://user-images.githubusercontent.com/60735401/215341201-d4871741-1d01-4dd0-9906-d961bcae2773.png)
 <h4 align="center">Pic:7</h1>
 Thus, we have come to the end. Its time to load our work to an Excel file.<br>
-df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )
+df.to_excel('English_Premier_League.xlsx', sheet_name = 'English_League' )
 
 Excel file name and sheet name can be set as desired.<br>
 ***to_excel()*** function -  is used to write object to an Excel file.
