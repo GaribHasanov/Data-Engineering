@@ -35,3 +35,15 @@ head(10) function – retriving 10 rows.
 
 ![image](https://user-images.githubusercontent.com/60735401/215338309-c2a2f6b5-cc51-43fb-a62d-4b56578c5d6a.png)
 <h4 align="center">Pic:2</h1>
+
+So, we extracted and parsed the JSON dataset into a readable and understandable form. Now, it's time to transform data.
+Let’s try to get date, time, day, month, year parts from 'date_string' column.
+
+Used functions:
+1.pd.to_datetime - converting argument/string/object to datetime data type.
+2.dt.date - extracts date part from datetime.
+3.dt.day -  extracts day part from datetime.
+4.dt.month_name() - extracts month part (with name) from datetime.
+5.dt.year - extracts year part from datetime.
+6.dt.time - extracts time part from datetime.
+
