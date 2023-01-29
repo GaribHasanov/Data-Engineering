@@ -103,12 +103,13 @@ I am going to add four new columns and extract each single score and assign to n
 **str.strip()** function – is used to remove leading and trailing characters.<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341125-32039a69-bcc2-4f88-81c9-0c59f7302762.png)
 <h4 align="center">Pic:5</h1>
+
 We have already extracted scores in the separate columns and we have to determine half-time and full-time winners.<br>
 
-As we mentioned above that we know already left side and right side teams.<br>
+As we mentioned above that we know already **left side** and **right side** teams.<br>
 Left side team is **“home_team”**, right side team is **“away_team”** and there are score extracted columns described below:<br>
-1) **“home_team_score_half_time”**,  2) **“away_team_score_half_time”**, 3)**“home_team_score_full_time”**,  
-4) **“away_team_score_full_time”**<br>
+1) **“home_team_score_half_time”**,  2) **“away_team_score_half_time”**, 3)**“home_team_score_full_time”**, 4) **“away_team_score_full_time”**<br>
+
 **Now, time to add condition and determine the half-time and full-time winner.**<br>
 1. If the **“half time home team score”** is less than **“half time away team score”** it means **“away_team”** is half time winner then it will return **“away_team” name.**<br>
 2. If the **“full time home team score”** is greater than **“full time away team score”** it means **“home_team”** is full time winner then it will return **“home_team”** name.<br>
@@ -123,31 +124,31 @@ Left side team is **“home_team”**, right side team is **“away_team”** an
 **df.loc[df['home_team_score_full_time']** >  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['home_team']**<br>
 **df.loc[df['home_team_score_full_time']** <  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['away_team']**<br>
 **df.loc[df['home_team_score_full_time']** == **df['away_team_score_full_time']**, **'full_time_winner']** = **'Draw'**<br>
-**loc()** function –helps us to retrieve data values from a dataset at an ease.<br>
+**loc()** function – helps us to retrieve data values from a dataset at an ease.<br>
 Using the **loc()** function, we can access the data values fitted in the particular row or column based on the index value passed to the function.<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341174-64602342-33b3-40d0-a304-10619ed3360b.png)
 <h4 align="center">Pic:6</h1>
 
-Half-time and full-time winners are determined, full-time winner is the main winner of the game. Now let’s add new winner column and assign full time winner to it and retrieve only needed columns.<br>
-# Adding new winner column and assign full_time_winner to it
-df['winner'] = df['full_time_winner']
-# Retrieving final needed columns
-**df** = **df[['home_team', 'away_team','match result','half_time_winner',         'half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**
+**Half-time** and **full-time** winners are determined, **full-time** winner is the main winner of the game. Now let’s add new winner column and assign **full-time** winner to it and retrieve only needed columns.<br>
+//Adding new winner column and assign **full_time_winner** to it
+**df['winner']** = **df['full_time_winner']**
+//Retrieving final needed columns
+**df** = **df[['home_team', 'away_team','match result','half_time_winner','half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**
 
 ![image](https://user-images.githubusercontent.com/60735401/215341201-d4871741-1d01-4dd0-9906-d961bcae2773.png)
 <h4 align="center">Pic:7</h1>
-Thus, we have come to the end. Its time to load our work to an Excel file.
+Thus, we have come to the end. Its time to load our work to an Excel file.<br>
 **df.to_excel('English_Premier_League.xlsx',sheet_name = 'English_League' )**
-Excel file name and sheet name can be set as desired.
-**to_excel()** function -  is used to write object to an Excel file. 
+Excel file name and sheet name can be set as desired.<br>
+**to_excel()** function -  is used to write object to an Excel file.<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341217-00333350-3434-4d26-8f38-747c2f72c230.png)
 <h4 align="center">Pic:8</h1>
-**Output:**
+**Output:**<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341230-4191a7ff-020f-46f6-ae25-a7483f9221d3.png)
 <h4 align="center">Pic:9</h1>
 ![image](https://user-images.githubusercontent.com/60735401/215341235-e82004fb-6a0b-4278-83ce-567b93f45098.png)
 <h4 align="center">Pic:10</h1>
-**Conclusion**
+**Conclusion**<br>
 We have learnt how to extract data from JSON dataset, parse, transform it with powerful Pandas library of Python and load it to an Excel file.
 
