@@ -132,6 +132,7 @@ Left side team is **“home_team”**, right side team is **“away_team”** an
 **df.loc[df['home_team_score_full_time']** >  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['home_team']**<br>
 **df.loc[df['home_team_score_full_time']** <  **df['away_team_score_full_time']**, **'full_time_winner']** = **df['away_team']**<br>
 **df.loc[df['home_team_score_full_time']** == **df['away_team_score_full_time']**, **'full_time_winner']** = **'Draw'**<br>
+
 **loc()** function – helps us to retrieve data values from a dataset at an ease.<br>
 Using the **loc()** function, we can access the data values fitted in the particular row or column based on the index value passed to the function.<br>
 
@@ -142,7 +143,7 @@ Using the **loc()** function, we can access the data values fitted in the partic
 //Adding new winner column and assign **full_time_winner** to it
 **df['winner']** = **df['full_time_winner']**
 //Retrieving final needed columns
-**df** = **df[['home_team', 'away_team','match result','half_time_winner','half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**
+**df** = **df[['home_team', 'away_team','match result','half_time_winner','half_time_score','full_time_score','full_time_winner','winner','match_date','day','month','year','time']]**<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215341201-d4871741-1d01-4dd0-9906-d961bcae2773.png)
 <h4 align="center">Pic:7</h1>
