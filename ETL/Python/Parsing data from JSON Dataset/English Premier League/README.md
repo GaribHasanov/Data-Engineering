@@ -29,9 +29,8 @@ We need Jupyter notebook. We can follow the steps with different application or 
 The output is not understandable because keys of JSON are defined as indexes instead of columns.
 In this case, we have to use orient="index" and replace indexes to columns and columns to indexes.
 
-orient="index" – defines indexes as columns
-
-head(10) function – retriving 10 rows.
+orient="index" – defines indexes as columns<br>
+head(10) function – retriving 10 rows.<br>
 
 ![image](https://user-images.githubusercontent.com/60735401/215338309-c2a2f6b5-cc51-43fb-a62d-4b56578c5d6a.png)
 <h4 align="center">Pic:2</h1>
@@ -39,8 +38,7 @@ head(10) function – retriving 10 rows.
 So, we extracted and parsed the JSON dataset into a readable and understandable form. Now, it's time to transform data.
 Let’s try to get date, time, day, month, year parts from 'date_string' column.
 
-Used functions:
-
+Used functions:<br>
 1. pd.to_datetime - converting argument/string/object to datetime data type.<br>
 2. dt.date - extracts date part from datetime.<br>
 3. dt.day -  extracts day part from datetime.<br>
