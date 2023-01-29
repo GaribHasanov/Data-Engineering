@@ -162,6 +162,6 @@ Excel file name and sheet name can be set as desired.<br>
 ![image](https://user-images.githubusercontent.com/60735401/215341235-e82004fb-6a0b-4278-83ce-567b93f45098.png)
 <h4 align="center">Pic:10</h1>
 
-### Conclusion ### <br>
+### Conclusion ###
 We have learnt how to extract data from JSON dataset, parse, transform it with powerful Pandas library of Python and load it to an Excel file.
 
