@@ -1,7 +1,7 @@
 # "English Premier League"- season match stats 2017/2018
 ### Extract data from "English Premier League" semi-structed (JSON) dataset, parse, transform and load into an Excel file.
 
-Hi,Friends
+***Hi,Friends***
 I am going to show you getting data from semi-structed (JSON) dataset, parse, transform and load into an Excel file
 Steps:
 1. Extracting data from JSON dataset
@@ -38,7 +38,7 @@ In this case, we have to use orient="index" and replace indexes to columns and c
 So, we extracted and parsed the JSON dataset into a readable and understandable form. Now, it's time to transform data.
 Let’s try to get date, time, day, month, year parts from 'date_string' column.
 
-Used functions:<br>
+***Used functions:***<br>
 1. pd.to_datetime - converting argument/string/object to datetime data type.<br>
 2. dt.date - extracts date part from datetime.<br>
 3. dt.day -  extracts day part from datetime.<br>
