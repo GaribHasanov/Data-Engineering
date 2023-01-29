@@ -86,6 +86,7 @@ So, There are already half time and full time score. We need to find half time w
 Based on the “DataFrame”, we see that left side is home team and right side is away team. <br>
 
 As an example of half time score of first row is **(0 : 2)** and we can say **half-time** winner is **“Liverpool”** , **full-time** score is **(0 : 3)** and we can full time winner is also **“Liverpool”** but this approach is not professional approach 😊<br>
+
 We have to extract half time and full time scores from **'half_time_score'** and **'full_time_score'** column and determine the half and full time exact winners.
 I am going to add four new columns and extract each single score and assign to new columns.<br>
 
