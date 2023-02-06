@@ -1,2 +1,2 @@
 # Data Engineering
- ETL, Data Cleansing, Integration etc.
+ ETL, Data Cleansing, Integration, Loading etc.
