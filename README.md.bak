@@ -12,5 +12,5 @@ Translated the existing "Place of Publication" entries to English and matched th
 Cleaned matched entries and applied necessary transformations to unmatched rows, ensuring all place names were consistent and in English.
 Transformation of Unmatched Data: For rows that did not match the standardized list, further data transformations were performed to correct and standardize these entries.
 
-##Outcome:
+Outcome:
 The result is a cleansed dataset with all columns standardized, free of unnecessary symbols, and with consistent place names in English. This project exemplifies thorough data cleaning techniques applied to a complex, real-world dataset.
